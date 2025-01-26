@@ -1,0 +1,247 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Switch
+        android:id="@+id/switchDegreesRadians"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Degrees/Radians"
+        android:thumbTint="@android:color/holo_blue_light"
+        android:trackTint="@android:color/darker_gray" />
+
+    <Switch
+        android:id="@+id/switchArithmeticTrigonometric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Toggle Calculator"
+        android:thumbTint="@android:color/holo_blue_light"
+        android:trackTint="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:id="@+id/arithmeticLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/input1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:hint="Enter first number"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/input2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:hint="Enter second number"
+            android:padding="10dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:text="Add"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnSubtract"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:text="Subtract"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnMultiply"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:text="Multiply"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnDivide"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:text="Divide"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnModulus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:text="Modulus"
+                android:textColor="@android:color/white" />
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/arithmeticResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Result:"
+            android:textColor="@color/material_dynamic_neutral20"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/trigonometricLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/trigInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:hint="Enter angle"
+            android:padding="10dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+
+            <Button
+                android:id="@+id/btnSine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:text="sin"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnCosine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:text="cos"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnTangent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:text="tan"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnInverseSine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:text="arcsin"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnInverseCosine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:text="arccos"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnInverseTangent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:text="arctan"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnReciprocalSine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:text="csc"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnReciprocalCosine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:text="sec"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnReciprocalTangent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:text="cot"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnInverseReciprocalSine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:text="arccsc"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnInverseReciprocalCosine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:text="arcsec"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnInverseReciprocalTangent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:text="arccot"
+                android:textColor="@android:color/white" />
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/trigonometricResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Result:"
+            android:textColor="@color/material_dynamic_neutral20"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>
